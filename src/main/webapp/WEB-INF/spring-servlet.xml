@@ -14,7 +14,7 @@
                               http://www.springframework.org/schema/tx
                               http://www.springframework.org/schema/tx/spring-tx.xsd
                               http://www.springframework.org/schema/security
-                              http://www.springframework.org/schema/security/spring-security.xsd">
+                              http://www.springframework.org/schema/security/spring-security-4.2.xsd">
                               
         <context:component-scan base-package="com.music.store" />
         <mvc:annotation-driven/>
@@ -68,7 +68,7 @@
 		<tx:annotation-driven transaction-manager="myTransactionManager" />
 		
         
-         <security:http auto-config="true">
+        <security:http auto-config="true">
         <security:intercept-url pattern="/admin/**" access="hasRole('ROLE_USER')" />
         <security:form-login
             login-page="/login"
@@ -77,6 +77,7 @@
             authentication-failure-url="/login?error"
             username-parameter="username"
             password-parameter="password" />
+            <security:csrf disabled="true"/>
         <security:logout
             logout-success-url="/login?logout" 
             />

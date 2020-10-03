@@ -78,7 +78,7 @@ public class AdminController {
 		
 		MultipartFile productImageId = theproduct.getImageId();
 		//String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-		path = Paths.get("D:\\eclipse-workspace\\MusicStorehibernateXMLconfigFullWeb\\src\\main\\webapp\\WEB-INF\\resources\\images\\" + theproduct.getProductId() + ".png");
+		path = Paths.get("D:\\eclipse-workspace\\MusicStorehibernateXMLconfigFullWebSecurity\\src\\main\\webapp\\WEB-INF\\resources\\images\\" + theproduct.getProductId() + ".png");
 		
 		try {
 			if(productImageId != null && !productImageId.isEmpty())
@@ -100,7 +100,7 @@ public class AdminController {
 	{
 		productService.deleteById(productId);
 		
-		path = Paths.get("D:\\eclipse-workspace\\MusicStorehibernateXMLconfigFullWeb\\src\\main\\webapp\\WEB-INF\\resources\\images\\" + productId + ".png");
+		path = Paths.get("D:\\eclipse-workspace\\MusicStorehibernateXMLconfigFullWebSecurity\\src\\main\\webapp\\WEB-INF\\resources\\images\\" + productId + ".png");
 		
 		if(Files.exists(path))
 		{
