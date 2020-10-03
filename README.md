@@ -7,4 +7,4 @@
 
 ```
 
-**Anyone can find all of my spring learning projects on master branch**
+**Anyone can find my spring ecommerce project code on master branch**
